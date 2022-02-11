@@ -54,6 +54,7 @@ my_data %>%
 ```
 
 ## Solutions 2: 
+
 Updating the function from solution 1
 
 ```{r}
