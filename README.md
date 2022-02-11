@@ -1,18 +1,16 @@
 # Feb22_myfun
 
 ## Table of contents
-* [myfun.R](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
+* [myfun.R](https://github.com/leynu/Feb22_myfun/blob/master/myfun.R)
+* [compare_cols.Rmd](https://github.com/leynu/Feb22_myfun/blob/master/compare_cols.Rmd)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project contains some functions I often use plus some suggestions to specific R coding problems
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* R version 4.1.2 (2021-11-01)
+* RStudio Version 1.4.1106
 	
 ## Setup
 To run this project, install it locally using npm:
