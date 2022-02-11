@@ -1,7 +1,7 @@
 # Feb22_myfun
 
 ## Table of contents
-* [](#general-info)
+* [myfun.R](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
