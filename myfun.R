@@ -1,8 +1,8 @@
-### File name     : Function_UsefulTools.R
-### Project       : 1250579_Roche_OR_DUS_IR_2020
+### File name     : myfun.R
+### Project       : Feb22_myfun
 ### Author        : Lnunez
 ### Date          : 2022-02-11
-### Platform      : R version 3.5.0 (2018-04-23) / RStudio / Linux
+### Platform      : R version 4.1.2 (2021-11-01) / RStudio / Linux
 ### ------------------------------------------------------------------
 
 # useful function
