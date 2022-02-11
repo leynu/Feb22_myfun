@@ -1,6 +1,8 @@
-# Feb22_myfun
+## Feb22_myfun
+
 
 This project contains some functions I often use plus some suggestions to specific R coding problems
+
 ---
 ## Table of contents
 * [myfun.R](https://github.com/leynu/Feb22_myfun/blob/master/myfun.R)
@@ -26,8 +28,14 @@ devtools::install_github("tidyverse/tidyverse")
 devtools::install_github("r-lib/vctrs")
 ```
 ---
-## Author
-Me - Leyla Nunez
+### Me
 
 - [Github](https://github.com/leynu)
 - [Email](mailto:leynu0210@gmail.com)
+
+---
+### Disclaimer
+
+I am not the writter of all the funtions. The primary sources are given in the .R/.Rmd files. 
+
+
