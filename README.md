@@ -1,11 +1,11 @@
 # Feb22_myfun
 
+This project contains some functions I often use plus some suggestions to specific R coding problems
+
 ## Table of contents
 * [myfun.R](https://github.com/leynu/Feb22_myfun/blob/master/myfun.R)
 * [compare_cols.Rmd](https://github.com/leynu/Feb22_myfun/blob/master/compare_cols.Rmd)
 
-## General info
-This project contains some functions I often use plus some suggestions to specific R coding problems
 	
 ## Technologies
 Project is created with:
@@ -13,10 +13,15 @@ Project is created with:
 * RStudio Version 1.4.1106
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, you need
 
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+# Install from CRAN
+install.packages("tidyverse")
+install.packages("vctrs")
+
+# Or the development version from GitHub
+# install.packages("devtools")
+devtools::install_github("tidyverse/tidyverse")
+devtools::install_github("r-lib/vctrs")
 ```
