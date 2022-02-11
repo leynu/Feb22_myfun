@@ -21,7 +21,6 @@ output:
 if (requireNamespace("thematic")) 
   thematic::thematic_rmd(font = "auto")
 ```
-
 ```{r loadlib, echo=T, results='hide', message=F, warning=F}
 library(tidyverse)
 ```
@@ -42,9 +41,7 @@ my_data %>%
 
 ```
 
-
 ## Solutions 1: 
-
 Create a function
 
 ```{r}
@@ -57,7 +54,6 @@ my_data %>%
 ```
 
 ## Solutions 2: 
-
 Updating the function from solution 1
 
 ```{r}
