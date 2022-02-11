@@ -34,6 +34,15 @@ devtools::install_github("r-lib/vctrs")
 - [Email](mailto:leynu0210@gmail.com)
 
 ---
+### 🤝 Connect with me:
+
+<a href="https://github.com/leynu"><img align="left" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a> <a href="https://twitter.com/leynu_"><img align="left" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a> <a href="https://www.linkedin.com/in/leynu/"><img align="left" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/linkedin-512.png" alt="Leyla Nunez | LinkedIn" width="24px"/></a>
+</br> 
+
+- 💬 If you have any question/feedback, please do not hesitate to reach out to me!
+
+
+---
 ### Disclaimer
 
 I am not the writter of all the funtions. The primary sources are given in the .R/.Rmd files. 
