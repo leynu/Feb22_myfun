@@ -1,3 +1,10 @@
+### File name     : compare_cols.R
+### Project       : Feb22_myfun
+### Author        : Lnunez
+### Date          : 2022-02-11
+### Platform      : R version 4.1.2 (2021-11-01) / RStudio / Linux
+### ------------------------------------------------------------------
+
 library(tidyverse)
 
 my_data <- tribble(
