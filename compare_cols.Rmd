@@ -1,0 +1,114 @@
+---
+title: "Compare columns"
+author: "[Leyla Nunez](https://github.com/leynu)"
+date: "Last updated: `r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    #code_folding: show
+    theme:
+      bootswatch: paper
+      # bg: "#202123"
+      # fg: "#B8BCC2"
+      # primary: "#EA80FC"
+      # secondary: "#00DAC6"
+      # base_font:
+      #   google: Prompt
+      # heading_font:
+      #   google: Proza Libre
+---
+
+```{r setup, include=FALSE}
+if (requireNamespace("thematic")) 
+  thematic::thematic_rmd(font = "auto")
+```
+
+```{r loadlib, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+```
+
+```{r}
+
+my_data <- tribble(
+  ~id, ~colA, ~colB,
+  1, "A",   "A",
+  2, "A",   "a",
+  3, "A",   NA
+)
+my_data
+
+# Issue: Does not capture the last row where ColB has a NA value
+my_data %>% 
+  filter(colA != colB )
+
+```
+
+
+## Solutions 1: 
+
+Create a function
+
+```{r}
+`%ne%` <- function(x, y){
+  x != y | is.na(x) & !is.na(y) | !is.na(x) & is.na(y) 
+}
+
+my_data %>% 
+  filter(colA %ne% colB )
+```
+
+## Solutions 2: 
+
+Updating the function from solution 1
+
+```{r}
+`%ne%` <- function(x, y){
+  z <- x != y 
+  return(is.na(z)|z)
+}
+
+my_data %>% 
+  filter(colA %ne% colB )
+```
+
+## Solutions 3: 
+
+Using `case_when()` inside `filter()`
+
+```{r}
+my_data %>% 
+  filter(
+    case_when(
+      colA == colB ~ FALSE,
+      TRUE ~ TRUE))
+```
+
+## Solution 4: 
+
+Using `vec_equal()` from `vctrs` package 
+
+```{r}
+my_data %>% 
+  filter(
+    !vctrs::vec_equal(colA, colB, na_equal = TRUE))
+
+vctrs::vec_equal("a", "a") #TRUE
+vctrs::vec_equal("a", "b") #FALSE
+vctrs::vec_equal("a", NA) #NA
+vctrs::vec_equal("a", NA, na_equal = TRUE) #FALSE
+
+```
+
+## Solution 5:  
+
+Use `Vectorize()` to vectorize non-vectorized functions
+
+```{r}
+my_data %>% 
+  filter(!Vectorize(identical)(colA, colB))
+
+identical("a", "a") #TRUE
+identical("a", "b") #FALSE
+identical("a", NA) #FALSE
+
+```
+
