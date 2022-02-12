@@ -39,7 +39,7 @@ fontawesome::fa("linkedin", "red")
 fontawesome::fa("twitter", "blue")
 
 # fa_png: Create a PNG version of a Font Awesome icon
-fontawesome::fa_png(name = "r-project", fill = "blue")
+fontawesome::fa_png(name = "r-project", file = "fig/r-project", fill = "blue")
 
 ```
 
@@ -50,4 +50,9 @@ It works well within **inline** text: `r fa("twitter", fill = "blue")`.
 
 
 <a href="https://github.com/leynu"><img align="left" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a>
+
+<a href="https://github.com/leynu"><img align="left" src="https://github.com/leynu/Feb22_myfun/blob/master/fig/r-project" alt="Leyla Nunez | Twitter" width="24px"/></a>
+
+
+
 
