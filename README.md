@@ -30,8 +30,10 @@ devtools::install_github("r-lib/vctrs")
 ---
 ### 🤝 Connect with me:
 
-<a href="https://github.com/leynu"><img align="left" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a><a href="https://twitter.com/leynu_"><img align="left" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a><a href="https://www.linkedin.com/in/leynu/"><img align="left" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/linkedin-512.png" alt="Leyla Nunez | LinkedIn" width="24px"/></a><a href="mailto:leynu0210@gmail.com"> <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" width="24px"> </a>
-</br> 
+<a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/github.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a> 
+<a href="https://www.linkedin.com/in/leynu/"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/linkedin.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
+<a href="https://twitter.com/leynu_"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/twitter.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
+<a href="mailto:leynu0210@gmail.com"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/envelope.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
 
 
 
