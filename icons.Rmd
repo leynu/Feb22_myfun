@@ -37,10 +37,6 @@ library(rsvg)
 fontawesome::fa("github", "black")
 fontawesome::fa("linkedin", "red") 
 fontawesome::fa("twitter", "blue")
-
-# fa_png: Create a PNG version of a Font Awesome icon
-fontawesome::fa_png(name = "r-project", file = "fig/r-project.png", fill = "blue")
-
 ```
 
 ## Inline code
@@ -66,7 +62,7 @@ fontawesome::fa_png(name = "github",
 ```
 
 
-2. Wrap the icon in anchor tags, `<a>`. For instance, here is an icon button to my github: <a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/r-project.png?raw=true" alt="Leyla Nunez | Twitter" width="24px"/></a>
+2. Wrap the icon in anchor tags, `<a>`. For instance, here is an icon button to my github: <a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/github.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
 
 
 
