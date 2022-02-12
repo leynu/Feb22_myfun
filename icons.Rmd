@@ -22,21 +22,24 @@ if (requireNamespace("thematic"))
   thematic::thematic_rmd(font = "auto")
 ```
 
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+## Summary
+> The fontawesome R package makes it very easy to insert Font Awesome icons into R Markdown documents and Shiny apps (or, anywhere else you need to put them).
+
+```{r load_packages, message=FALSE, warning=FALSE, include=TRUE} 
+#install.packages("fontawesome")
 library(fontawesome)
 #install.packages("rsvg")
 library(rsvg)
-
 ```
 
-## [Fontawesome](https://github.com/rstudio/fontawesome) 
-
-> The fontawesome R package makes it very easy to insert Font Awesome icons into R Markdown documents and Shiny apps (or, anywhere else you need to put them).
-
 ```{r fontawesome}
-fontawesome::fa("github", "black")
-fontawesome::fa("linkedin", "red") 
+
 fontawesome::fa("twitter", "blue")
+# Default height and width value is "1em"
+fontawesome::fa("github", "black", height="2em")
+# Adjusting the left margin of the icon
+fontawesome::fa("linkedin", "red", margin_left = "2em") 
+
 ```
 
 ## Inline code
@@ -57,13 +60,13 @@ In my understanding this is more of an 2 step process.
 ```{r}
 # Saving an "github" icon
 fontawesome::fa_png(name = "github", 
-                    file = "fig/github_black.png", 
+                    file = "fig/github_b.png", 
                     fill = "black")
 
 ```
 
 
-2. Wrap the icon in anchor tags, `<a>`. For instance, here is an icon button to my github <a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/github_black.png.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
+2. Wrap the icon in anchor tags, `<a>`. For instance, here is an icon button to my github <a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/github_b.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
 
 
 
