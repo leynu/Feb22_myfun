@@ -39,19 +39,34 @@ fontawesome::fa("linkedin", "red")
 fontawesome::fa("twitter", "blue")
 
 # fa_png: Create a PNG version of a Font Awesome icon
-fontawesome::fa_png(name = "r-project", file = "fig/r-project", fill = "blue")
+fontawesome::fa_png(name = "r-project", file = "fig/r-project.png", fill = "blue")
 
 ```
 
-It works well within **inline** text: `r fa("twitter", fill = "blue")`.
+## Inline code
+
+`fontawesome::fa()` works well within inline text:  `r fa("twitter", fill = "blue")`
+
+The inline R code for the blue, twitter icon is: `` `r
+fa("twitter", fill = "blue")` ``
 
 
+## To create icon buttons
+
+In my understanding this is more of an 2 step process.
+
+1. You need to create a **.png** version of a fontawesome icon, see the documentation [here](https://www.rdocumentation.org/packages/fontawesome/versions/0.2.1/topics/fa_png)
 
 
+```{r}
+# Saving an "github" icon
+fontawesome::fa_png(name = "github", 
+                    file = "fig/github.png", 
+                    fill = "grey")
+```
 
-<a href="https://github.com/leynu"><img align="left" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a>
 
-<a href="https://github.com/leynu"><img align="left" src="https://github.com/leynu/Feb22_myfun/blob/master/fig/r-project" alt="Leyla Nunez | Twitter" width="24px"/></a>
+2. Wrap the icon in anchor tags, `<a>`. For instance, here is an icon button to my github: <a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/r-project.png?raw=true" alt="Leyla Nunez | Twitter" width="24px"/></a>
 
 
 
