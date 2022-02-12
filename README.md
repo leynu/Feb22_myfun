@@ -7,6 +7,9 @@ This project contains some functions I often use plus some suggestions to specif
 ## Table of contents
 * [myfun.R](https://github.com/leynu/Feb22_myfun/blob/master/myfun.R)
 * [compare_cols.Rmd](https://github.com/leynu/Feb22_myfun/blob/master/compare_cols.Rmd)
+* [icons.Rmd](https://github.com/leynu/Feb22_myfun/blob/master/icons.Rmd)
+
+
 
 ---	
 ## Technologies
