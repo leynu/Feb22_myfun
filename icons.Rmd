@@ -1,0 +1,53 @@
+---
+title: "Icons"
+author: "[Leyla Nunez](https://github.com/leynu)"
+date: "Last updated: `r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    #code_folding: show
+    theme:
+      bootswatch: paper
+      # bg: "#202123"
+      # fg: "#B8BCC2"
+      # primary: "#EA80FC"
+      # secondary: "#00DAC6"
+      # base_font:
+      #   google: Prompt
+      # heading_font:
+      #   google: Proza Libre
+---
+
+```{r setup, include=FALSE}
+if (requireNamespace("thematic")) 
+  thematic::thematic_rmd(font = "auto")
+```
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+#install.packages("rsvg")
+library(rsvg)
+
+```
+
+## [Fontawesome](https://github.com/rstudio/fontawesome) 
+
+> The fontawesome R package makes it very easy to insert Font Awesome icons into R Markdown documents and Shiny apps (or, anywhere else you need to put them).
+
+```{r fontawesome}
+fontawesome::fa("github", "black")
+fontawesome::fa("linkedin", "red") 
+fontawesome::fa("twitter", "blue")
+
+# fa_png: Create a PNG version of a Font Awesome icon
+fontawesome::fa_png(name = "r-project", fill = "blue")
+
+```
+
+It works well within **inline** text: `r fa("twitter", fill = "blue")`.
+
+
+
+
+
+<a href="https://github.com/leynu"><img align="left" src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Github-512.png" alt="Leyla Nunez | Twitter" width="24px"/></a>
+

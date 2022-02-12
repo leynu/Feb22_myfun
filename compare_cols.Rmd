@@ -21,8 +21,11 @@ output:
 if (requireNamespace("thematic")) 
   thematic::thematic_rmd(font = "auto")
 ```
+
 ```{r loadlib, echo=T, results='hide', message=F, warning=F}
-library(tidyverse)
+
+library(tidyverse) # Easily Install and Load the 'Tidyverse', CRAN v1.3.1 
+
 ```
 
 ```{r}
@@ -108,4 +111,7 @@ identical("a", "b") #FALSE
 identical("a", NA) #FALSE
 
 ```
+
+
+
 
