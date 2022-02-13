@@ -1,15 +1,9 @@
 ## Feb22_myfun
 
-
-This project contains some functions I often use plus some suggestions to specific R coding problems
-
----
 ## Table of contents
-* [myfun.R](https://github.com/leynu/Feb22_myfun/blob/master/myfun.R)
-* [compare_cols.Rmd](https://github.com/leynu/Feb22_myfun/blob/master/compare_cols.Rmd)
-* [icons.Rmd](https://github.com/leynu/Feb22_myfun/blob/master/icons.Rmd)
-
-
+* [Funtions I often use](https://github.com/leynu/Feb22_myfun/blob/master/myfun.R)
+* [How to compare two columns with NA values](https://github.com/leynu/Feb22_myfun/blob/master/compare_cols.Rmd)
+* [Useful emoji/icon sites](https://github.com/leynu/Feb22_myfun/blob/master/icons.Rmd)
 
 ---	
 ## Technologies
