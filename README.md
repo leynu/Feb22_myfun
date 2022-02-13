@@ -38,7 +38,7 @@ devtools::install_github("r-lib/vctrs")
 <a href="https://github.com/leynu"><img src="https://openmoji.org/data/color/svg/E045.svg" alt="Leyla Nunez | Twitter" width="30px"/></a> 
 <a href="https://www.linkedin.com/in/leynu/"><img src="https://openmoji.org/data/color/svg/E046.svg" alt="Leyla Nunez | Twitter" width="30px"/></a>
 <a href="https://twitter.com/leynu_"><img src="https://openmoji.org/data/color/svg/E040.svg" alt="Leyla Nunez | Twitter" width="30px"/></a>
-<a href="mailto:leynu0210@gmail.com"><img src="https://openmoji.org/data/color/svg/1F4E7.svg" alt="Leyla Nunez | Twitter" width="30px"/></a>
+<a href="mailto:leynu0210@gmail.com"><img src="https://openmoji.org/data/color/svg/2709.svg" alt="Leyla Nunez | Twitter" height="30px"/></a>
 
 
 
