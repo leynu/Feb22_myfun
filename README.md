@@ -31,16 +31,15 @@ devtools::install_github("tidyverse/tidyverse")
 devtools::install_github("r-lib/vctrs")
 ```
 ---
-### 🤝 Connect with me:
+### Connect with me:
 
-<a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/github.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a> 
-<a href="https://www.linkedin.com/in/leynu/"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/linkedin.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
-<a href="https://twitter.com/leynu_"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/twitter.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
-<a href="mailto:leynu0210@gmail.com"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/envelope.png?raw=true" alt="Leyla Nunez | Twitter" width="21px"/></a>
+- If you have any question/feedback, please do not hesitate to reach out to me!
 
+<a href="https://github.com/leynu"><img src="https://openmoji.org/data/color/svg/E045.svg" alt="Leyla Nunez | Twitter" width="30px"/></a> 
+<a href="https://www.linkedin.com/in/leynu/"><img src="https://openmoji.org/data/color/svg/E046.svg" alt="Leyla Nunez | Twitter" width="30px"/></a>
+<a href="https://twitter.com/leynu_"><img src="https://openmoji.org/data/color/svg/E040.svg" alt="Leyla Nunez | Twitter" width="30px"/></a>
+<a href="mailto:leynu0210@gmail.com"><img src="https://openmoji.org/data/color/svg/2709.svg" alt="Leyla Nunez | Twitter" height="30px"/></a>
 
-
-- 💬 If you have any question/feedback, please do not hesitate to reach out to me!
 
 
 ---
