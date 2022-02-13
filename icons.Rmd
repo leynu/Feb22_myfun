@@ -23,6 +23,11 @@ if (requireNamespace("thematic"))
 ```
 
 ## Summary
+
+The sites I visit when I need **icons **
+
+## [Fontawesome](https://github.com/rstudio/fontawesome)
+
 > The fontawesome R package makes it very easy to insert Font Awesome icons into R Markdown documents and Shiny apps (or, anywhere else you need to put them).
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=TRUE} 
@@ -69,6 +74,29 @@ fontawesome::fa_png(name = "github",
 
    For instance, here is an icon button to my github <a href="https://github.com/leynu"><img src="https://github.com/leynu/Feb22_myfun/blob/master/fig/github_b.png?raw=true" alt="Leyla Nunez | Twitter" width="24px"/></a>
 
+
+## [Openmoji.org](https://openmoji.org/)
+
+Open source emojis for designers, developers and everyone else!
+
+Some examples:
+<img width="100" alt="openmoji-github-keyvisual" src="https://openmoji.org/data/color/svg/270C.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://openmoji.org/data/color/svg/1F9A7.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://openmoji.org/data/color/svg/1F34D.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://openmoji.org/data/color/svg/1F916.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://openmoji.org/data/color/svg/26C5.svg">
+
+
+## [Bioicons.com](https://bioicons.com/)
+
+> Bioicons is a free library of open source icons for scientific illustrations using vector graphics software such as Inkscape or Adobe Illustrator.
+
+Some examples: 
+<img width="100" alt="openmoji-github-keyvisual" src="https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/dna-nucleotides-forked.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://bioicons.com/icons/cc-by-sa-4.0/Viruses/Hanna_Vega/SARS-CoV-2.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/heart-chambers-visible.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://bioicons.com/icons/cc-0/Machine_Learning/Simon_D%C3%BCrr/classification.svg">
+<img width="100" alt="openmoji-github-keyvisual" src="https://bioicons.com/icons/cc-0/Lab_apparatus/Xavax/Beakers.svg">
 
 
 
