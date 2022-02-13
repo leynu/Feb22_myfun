@@ -1,0 +1,236 @@
+---
+title: "Use across"
+author: "[Leyla Nunez](https://github.com/leynu)"
+date: "Last updated: `r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    #code_folding: show
+    theme:
+      bootswatch: paper
+      # bg: "#202123"
+      # fg: "#B8BCC2"
+      # primary: "#EA80FC"
+      # secondary: "#00DAC6"
+      # base_font:
+      #   google: Prompt
+      # heading_font:
+      #   google: Proza Libre
+---
+
+```{r setup, include=FALSE}
+if (requireNamespace("thematic")) 
+  thematic::thematic_rmd(font = "auto")
+```
+
+```{r loadlib, echo=T, results='hide', message=F, warning=F}
+
+library(tidyverse) # Easily Install and Load the 'Tidyverse', CRAN v1.3.1 
+library(missMethods) # Methods for Missing Data, CRAN v0.3.0
+
+```
+
+## Summary
+
+## The `across()` funtion
+
+```{r df_xyz}
+
+# we are creating a data frame that contains three columns of 10 random numbers
+set.seed(123)
+df_xyz <- tibble(
+  x = rnorm(10),
+  y = rnorm(10),
+  z = rnorm(10)) %>% 
+  delete_MCAR(0.1) # adding some missing completely at random (MCAR) values
+
+
+
+```
+
+```{r}
+
+
+# we can now get the mean of each column like this
+df_xyz %>%
+  summarise(
+    across(
+      .cols  = everything(),
+      .fns   = mean, 
+      na.rm  = TRUE, #taking care of NA
+      .names = "{col}_mean" #option 1
+    )
+  )
+
+
+df_xyz %>% 
+  summarise(
+    across(
+      .cols  = everything(),
+      .fns   = list(mean = mean), # Note the list()
+      na.rm  = TRUE,
+      .names = "{col}_{fn}" #option 2
+    )
+  )
+
+df_xyz %>% 
+  summarise(
+    across(
+      .cols  = everything(),
+      .fns   = list(mymean = mean), # Note different name "mymean"
+      na.rm  = TRUE,
+      .names = "{col}_{fn}" #option 2
+    )
+  )
+
+df_xyz %>% 
+  summarise(
+    across(
+      .cols  = everything(),
+      .fns   = ~ mean(.x, na.rm = TRUE), #using TILDA
+      .names = "{col}_mean"
+    )
+  )
+
+# Several functions
+df_xyz %>% 
+  summarise(
+    across(
+      .cols  = everything(),
+      .fns   = list(mean = mean,
+                    min = min,
+                    max = max), # Several functions
+      na.rm  = TRUE,
+      .names = "{col}_{fn}" #option 2
+    )
+  ) 
+# Note: The results are hard to read and interpret because they are arranged horizontally
+
+# A nicer solution
+df_xyz %>% 
+  summarise(
+    across(
+      .cols  = everything(),
+      .fns   = list(nmiss = ~ sum(is.na(.x)), # added this one
+                    mean = ~ mean(.x, na.rm = TRUE),
+                    min = ~ min(.x, na.rm = TRUE),
+                    max = ~ max(.x, na.rm = TRUE)) #, Additional modification
+      #.names = "{col}_{fn}" # is not need
+    )
+  ) %>% 
+  tidyr::pivot_longer(
+    cols      = everything(),
+    names_to  = c("variable", ".value"),
+    names_sep = "_"
+  )
+
+```
+
+## Across with `filter()`
+
+Actually, using `across()` in `filter()` is deprecated, use `if_any()` or `if_all()`.
+
+
+
+```{r}
+
+# Option 1
+# Create our own function 
+not_missing <- function(x) {
+  !is.na(x)
+}
+# Not good! We get a message
+# Using `across()` in `filter()` is deprecated, use `if_any()` or `if_all()`.
+df_xyz %>% 
+  filter(
+    across(
+      .cols = everything(),
+      .fns  = not_missing
+    )
+  )
+
+# Works!
+df_xyz %>% 
+  filter(
+    if_all( #change across() to if_all()
+      .cols = everything(),
+      .fns  = not_missing
+    )
+  )
+
+# Option 2
+# Will not work
+# df_xyz %>% 
+#   filter(
+#     across(
+#       .cols = everything(),
+#       .fns  = !is.na(.x)
+#     )
+#   )
+
+# Better but we get an error message
+df_xyz %>% 
+  filter(
+    across(
+      .cols = everything(),
+      .fns  = ~ !is.na(.x) # Use the special .x
+    )
+  )
+
+# Works!
+df_xyz %>% 
+  filter(
+    if_all( # use if_all
+      .cols = everything(),
+      .fns  = ~ !is.na(.x) # Use the special .x
+    )
+  )
+
+```
+
+## Across with mutate
+
+```{r}
+set.seed(123)
+demographics <- tibble(
+  id       = 1:10,
+  age      = c(sample(1:30, 9, TRUE), NA),
+  race     = c(1, 2, 1, 4, 7, 1, 2, 9, 1, 3),
+  hispanic = c(7, 0, 1, 0, 1, 0, 1, 9, 0, 1),
+  edu_4cat = c(4, 2, 9, 1, 2, 3, 4, 9, 3, 3),
+  inc_6cat = c(1, 4, 1, 1, 5, 3, 2, 2, 7, 9)
+)
+
+# We want to recode all the 7’s and 9’s to NA’s
+demographics %>% 
+  mutate(
+    across(
+      .cols = c(-id, -age),
+      .fns  = ~ if_else(.x == 7 | .x == 9, NA_real_, .x)
+    )
+  )
+
+```
+
+
+```{r}
+set.seed(123)
+drug_trial <- tibble(
+  id           = 1:10,
+  se_headache  = sample(0:1, 10, TRUE),
+  se_diarrhea  = sample(0:1, 10, TRUE),
+  se_dry_mouth = sample(0:1, 10, TRUE),
+  se_nausea    = sample(0:1, 10, TRUE)
+)
+
+#we want to create a factor version of each of the side effect columns
+drug_trial %>% 
+  mutate(
+    across(
+      .cols  = starts_with("se"),
+      .fns   = ~ factor(.x, 0:1, c("No", "Yes")),
+      .names = "{col}_f" #note!
+    )
+  )
+
+```
+
